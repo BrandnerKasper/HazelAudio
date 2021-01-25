@@ -28,7 +28,9 @@ namespace Hazel {
 
 	static bool s_DebugLog = true;
 
-#define HA_LOG(x) std::cout << "[Hazel Audio]  " << x << std::endl
+#define HA_LOG(x) 
+	
+	//std::cout << "[Hazel Audio]  " << x << std::endl
 
 	// Currently supported file formats
 	enum class AudioFileFormat
@@ -172,8 +174,8 @@ namespace Hazel {
 			HA_LOG("  Length: " << mins << "m" << secs << "s");
 		}
 
-		if (alGetError() != AL_NO_ERROR)
-			std::cout << "Failed to setup sound source" << std::endl;
+		//if (alGetError() != AL_NO_ERROR)
+			//std::cout << "Failed to setup sound source" << std::endl;
 
 		return result;
 	}
